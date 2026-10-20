@@ -1,0 +1,105 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#fbf5eb"><meta name="description" content="Một bông hoa nhỏ, một vườn yêu thương. Món quà dành tặng bạn nhân ngày 20/10."><title>Một vườn thương · 20/10</title><style>html,body{margin:0;background:#fbf5eb}#october-garden{min-height:100svh}.gift-main{min-height:calc(100svh - 140px)}</style></head><body><div id="october-garden">
+  <header class="gift-top"><span>MỘT MÓN QUÀ NHỎ, GỬI BẠN</span><span class="gift-date">20 / 10</span></header>
+  <main class="gift-main">
+    <div class="gift-copy" aria-live="polite" aria-atomic="true">
+      <p class="gift-eyebrow">HAPPY VIETNAMESE WOMEN’S DAY</p>
+      <h1>Một bông hoa nhỏ.<br><em>Một niềm vui to.</em></h1>
+      <p class="gift-description">Có một điều dễ thương đang chờ bạn…</p>
+    </div>
+    <div class="gift-seed">
+      <button class="gift-flower cursor-interaction" type="button" aria-label="Chạm vào bông hoa để mở vườn hoa" aria-expanded="false">
+        <span class="gift-halo" aria-hidden="true"></span><span class="gift-stem" aria-hidden="true"></span>
+        <span class="gift-leaf leaf-one" aria-hidden="true"></span><span class="gift-leaf leaf-two" aria-hidden="true"></span>
+        <span class="gift-bloom" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><b></b></span>
+      </button>
+      <span class="gift-hint">Chạm vào bông hoa nhé <span aria-hidden="true">↗</span></span>
+    </div>
+    <canvas class="gift-canvas" aria-hidden="true"></canvas>
+    <div class="gift-bottom"><span class="gift-note">Vì bạn xứng đáng với những điều đẹp đẽ.</span><button class="gift-replay cursor-interaction" type="button" hidden>Xem lại từ đầu ↻</button></div>
+  </main>
+  <footer class="gift-footer"><span>GỬI MỘT CHÚT DỊU DÀNG</span><span>VÀ THẬT NHIỀU YÊU THƯƠNG ♡</span></footer>
+</div>
+<style>
+#october-garden{--paper:#fbf5eb;--ink:#523f43;--rose:#aa4f67;--muted:#7d686b;position:relative;isolation:isolate;overflow:hidden;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;min-height:700px;width:100%;box-sizing:border-box;color-scheme:light}
+#october-garden *{box-sizing:border-box}#october-garden button{font:inherit;color:inherit;-webkit-tap-highlight-color:transparent}#october-garden [hidden]{display:none!important}
+#october-garden .gift-top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:28px 6%;font-size:10px;letter-spacing:2px;color:var(--muted);position:relative;z-index:3}
+#october-garden .gift-date{font-family:Georgia,serif;font-size:22px;letter-spacing:1px;color:var(--rose)}
+#october-garden .gift-main{height:600px;position:relative}
+#october-garden .gift-copy{position:relative;z-index:3;text-align:center;padding:30px 20px 0;pointer-events:none}
+#october-garden .gift-eyebrow{font-size:10px;letter-spacing:3px;color:var(--rose);margin:0 0 18px}
+#october-garden h1{font:400 clamp(36px,6.4vw,64px)/1.13 'Times New Roman',Times,serif;letter-spacing:normal;margin:0;color:var(--ink)}
+#october-garden h1 em{color:var(--rose);font-weight:400}
+#october-garden .gift-description{font-size:14px;line-height:1.8;max-width:450px;margin:20px auto 0;color:var(--muted);min-height:50px}
+#october-garden .gift-seed{position:absolute;left:50%;top:265px;transform:translateX(-50%);width:240px;text-align:center;z-index:4;transition:opacity .45s,transform .8s}
+#october-garden .gift-flower{position:relative;display:block;border:0;background:transparent;width:190px;height:230px;margin:auto;padding:0}
+#october-garden .gift-flower:focus-visible{outline:2px solid var(--rose);outline-offset:8px;border-radius:100px}
+#october-garden .gift-halo{position:absolute;width:190px;height:190px;border:1px solid #dfb7b34d;border-radius:50%;top:-15px;left:0;animation:gift-pulse 3s ease-in-out infinite}
+#october-garden .gift-halo:after{content:'';position:absolute;inset:13px;border:1px solid #dfb7b330;border-radius:50%}
+#october-garden .gift-stem{position:absolute;left:93px;top:84px;width:4px;height:131px;background:#738764;border-radius:100%;transform:rotate(-4deg);transform-origin:top}
+#october-garden .gift-leaf{position:absolute;background:#8d9d78;width:48px;height:23px;border-radius:100% 0 100% 0;left:49px;top:151px;transform:rotate(27deg)}
+#october-garden .leaf-two{left:94px;top:132px;transform:rotate(-18deg);width:43px;background:#a3af8c}
+#october-garden .gift-bloom{position:absolute;top:63px;left:95px;animation:gift-sway 4s ease-in-out infinite;filter:drop-shadow(0 6px 9px #b36a8120)}
+#october-garden .gift-bloom i{position:absolute;left:-20px;top:-59px;width:40px;height:61px;border-radius:55% 55% 42% 42%;transform-origin:20px 59px;background:linear-gradient(0deg,#cf758f,#f4b3bf 65%,#f5c7cb);box-shadow:inset 1px 0 1px #fff5}
+#october-garden .gift-bloom i:nth-child(2){transform:rotate(45deg)}#october-garden .gift-bloom i:nth-child(3){transform:rotate(90deg)}#october-garden .gift-bloom i:nth-child(4){transform:rotate(135deg)}#october-garden .gift-bloom i:nth-child(5){transform:rotate(180deg)}#october-garden .gift-bloom i:nth-child(6){transform:rotate(225deg)}#october-garden .gift-bloom i:nth-child(7){transform:rotate(270deg)}#october-garden .gift-bloom i:nth-child(8){transform:rotate(315deg)}
+#october-garden .gift-bloom b{position:absolute;width:31px;height:31px;left:-15.5px;top:-15.5px;background:radial-gradient(circle at 35% 30%,#fae1a2,#d0a04c);border-radius:50%;box-shadow:0 0 0 4px #f4d99c55}
+#october-garden .gift-hint{display:block;margin-top:12px;font-size:12px;color:var(--muted);letter-spacing:.4px}#october-garden .gift-hint span{display:inline-block;color:var(--rose);font-size:20px;transform:rotate(-35deg);margin-left:5px}
+#october-garden .gift-flower:hover .gift-bloom{filter:drop-shadow(0 7px 14px #b36a8150)}
+#october-garden .gift-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+#october-garden .gift-bottom{position:absolute;bottom:10px;left:16px;right:16px;text-align:center;z-index:4;font-size:11px;color:var(--muted)}
+#october-garden .gift-replay{background:var(--paper);border:1px solid #cdb3ad;border-radius:30px;padding:12px 22px;min-height:44px;margin:0 auto;color:var(--rose);box-shadow:0 3px 15px #fbf5eb90}
+#october-garden .gift-footer{display:flex;justify-content:space-between;gap:12px;padding:20px 6%;font-size:9px;letter-spacing:1.6px;border-top:1px solid #d5c5b544;position:relative;z-index:2;color:var(--muted)}
+#october-garden.is-open .gift-seed{opacity:0;transform:translate(-50%,-45px) scale(.65);pointer-events:none}#october-garden.is-open .gift-copy{animation:gift-message .9s ease both}
+@keyframes gift-sway{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}@keyframes gift-pulse{50%{transform:scale(1.08);opacity:.45}}@keyframes gift-message{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:480px){#october-garden{min-height:690px}#october-garden .gift-top{padding:24px 22px;font-size:8px;letter-spacing:1.3px}#october-garden .gift-main{height:570px}#october-garden .gift-copy{padding-top:32px}#october-garden h1{font-size:39px;letter-spacing:normal}#october-garden .gift-eyebrow{font-size:8px;letter-spacing:2px}#october-garden .gift-description{font-size:13px;max-width:295px}#october-garden .gift-seed{top:250px}#october-garden .gift-footer{padding:18px 22px;font-size:7px;letter-spacing:1px}}
+@media(prefers-reduced-motion:reduce){#october-garden *,#october-garden *:before,#october-garden *:after{animation:none!important;transition:none!important}}
+</style>
+<script>
+(()=>{
+ const root=document.getElementById('october-garden');
+ const canvas=root.querySelector('canvas'),ctx=canvas.getContext('2d');
+ const flower=root.querySelector('.gift-flower'),replay=root.querySelector('.gift-replay');
+ const heading=root.querySelector('h1'),description=root.querySelector('.gift-description');
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+ let width=0,height=0,opened=false,started=0,frame=0,flowers=[],seed=2010;
+ const random=()=>{seed=(seed*1664525+1013904223)>>>0;return seed/4294967296};
+ const colors=[['#f3afbe','#cb6987'],['#f8d5d2','#df999e'],['#fff8eb','#e5d4ba'],['#d989a8','#b05a82'],['#eec385','#c79554']];
+ function resize(){
+  const box=canvas.getBoundingClientRect();width=box.width;height=box.height;
+  const dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);
+  seed=2010;flowers=[];const count=width<500?36:64;
+  for(let i=0;i<count;i++){const depth=i/count,x=(i%2===0?random()*.5:.5+random()*.5)*width;
+   flowers.push({x,base:height+20+random()*65,h:105+random()*150+depth*65,r:12+random()*12+depth*7,phase:random()*6.28,delay:Math.abs(x/width-.5)*750+random()*850,color:colors[Math.floor(random()*colors.length)],type:i%4,depth});}
+  if(opened)draw(performance.now());else ctx.clearRect(0,0,width,height);
+ }
+ function leaf(x,y,size,side){ctx.save();ctx.translate(x,y);ctx.scale(side,1);ctx.beginPath();ctx.moveTo(0,0);ctx.bezierCurveTo(size*.2,-size*.85,size,-size*.75,size,-size*.68);ctx.bezierCurveTo(size*.9,-size*.1,size*.4,size*.12,0,0);ctx.fill();ctx.restore();}
+ function blossom(f,x,y,scale,time){
+  ctx.save();ctx.translate(x,y);ctx.rotate(Math.sin(time*.0008+f.phase)*.1);ctx.scale(scale,scale);const r=f.r;
+  if(f.type===3){for(let j=0;j<3;j++){ctx.save();ctx.rotate((j-1)*.4);ctx.beginPath();ctx.moveTo(0,r*.5);ctx.bezierCurveTo(-r*1.2,r*.2,-r,-r*.8,-r*.65,-r*1.15);ctx.quadraticCurveTo(0,-r*.5,r*.65,-r*1.15);ctx.bezierCurveTo(r,-r*.8,r*1.2,r*.2,0,r*.5);ctx.fillStyle=j===1?f.color[0]:f.color[1];ctx.fill();ctx.restore();}}
+  else{const petals=f.type===0?10:7;for(let j=0;j<petals;j++){ctx.save();ctx.rotate(j*Math.PI*2/petals);const g=ctx.createLinearGradient(0,0,0,-r*1.55);g.addColorStop(0,f.color[1]);g.addColorStop(1,f.color[0]);ctx.fillStyle=g;ctx.beginPath();ctx.ellipse(0,-r*.72,r*(f.type===0?.3:.46),r*.8,0,0,Math.PI*2);ctx.fill();ctx.restore();}
+   ctx.fillStyle='#d2a451';ctx.beginPath();ctx.arc(0,0,r*.3,0,Math.PI*2);ctx.fill();ctx.fillStyle='#f4d799';for(let k=0;k<8;k++){const a=k*2.4;ctx.beginPath();ctx.arc(Math.cos(a)*r*.18,Math.sin(a)*r*.18,1.1,0,6.28);ctx.fill();}}
+  ctx.restore();
+ }
+ function draw(now){
+  ctx.clearRect(0,0,width,height);const elapsed=reduced.matches?10000:now-started,wind=reduced.matches?0:now;
+  for(const f of flowers){const p=Math.max(0,Math.min(1,(elapsed-f.delay)/1500));if(p===0)continue;
+   const growth=1-Math.pow(1-p,3),sway=Math.sin(wind*.001+f.phase)*(5+f.depth*6),x=f.x+sway*growth,y=f.base-f.h*growth;
+   ctx.strokeStyle=f.depth<.4?'#a4af8c':'#798e69';ctx.lineWidth=1.5+f.depth*1.5;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(f.x,f.base);ctx.bezierCurveTo(f.x-10,f.base-f.h*.3*growth,x+8,y+f.h*.32*growth,x,y);ctx.stroke();
+   ctx.fillStyle=f.depth<.4?'#a5b28d':'#8a9d76';leaf(f.x+sway*.4,f.base-f.h*.34*growth,(22+f.r*.55)*growth,-1);leaf(f.x+sway*.65,f.base-f.h*.58*growth,(18+f.r*.4)*growth,1);
+   const bloom=Math.max(0,Math.min(1,(p-.2)/.8));blossom(f,x,y,bloom*(1+Math.sin(p*Math.PI)*.14),wind);
+  }
+  if(!reduced.matches){const alpha=Math.min(1,elapsed/1800);ctx.fillStyle='#c77b93';for(let i=0;i<14;i++){const x=((i*137.7+Math.sin(now*.0004+i)*28)%Math.max(width,1)),y=height-((now-started)*.025+i*43)%height;ctx.globalAlpha=alpha*.35;ctx.save();ctx.translate(x,y);ctx.rotate(now*.0007+i);ctx.beginPath();ctx.ellipse(0,0,2.4,5,0,0,6.28);ctx.fill();ctx.restore();}ctx.globalAlpha=1;}
+ }
+ function animate(now){frame=0;if(!opened||!root.isConnected||document.hidden)return;draw(now);if(!reduced.matches)frame=requestAnimationFrame(animate);}
+ function start(){
+  cancelAnimationFrame(frame);opened=true;started=performance.now();root.classList.add('is-open');flower.setAttribute('aria-expanded','true');flower.disabled=true;
+  heading.innerHTML='Dành tặng bạn,<br><em>cả một vườn thương.</em>';description.innerHTML='Chúc bạn một ngày 20/10 thật rạng rỡ.<br>Luôn được yêu thương, và luôn là chính mình.';
+  root.querySelector('.gift-note').hidden=true;replay.hidden=false;replay.focus({preventScroll:true});frame=requestAnimationFrame(animate);
+ }
+ flower.addEventListener('click',start);
+ replay.addEventListener('click',()=>{cancelAnimationFrame(frame);opened=false;root.classList.remove('is-open');ctx.clearRect(0,0,width,height);heading.innerHTML='Một bông hoa nhỏ.<br><em>Một niềm vui to.</em>';description.textContent='Có một điều dễ thương đang chờ bạn…';flower.disabled=false;flower.setAttribute('aria-expanded','false');replay.hidden=true;root.querySelector('.gift-note').hidden=false;flower.focus({preventScroll:true});});
+ new ResizeObserver(resize).observe(canvas);
+ document.addEventListener('visibilitychange',()=>{if(!document.hidden&&opened&&!frame)frame=requestAnimationFrame(animate);});
+ reduced.addEventListener('change',()=>{cancelAnimationFrame(frame);frame=0;if(opened)frame=requestAnimationFrame(animate);});resize();
+})();
+</script>
+</body></html>
